@@ -118,6 +118,8 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -179,6 +181,8 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-icons {
@@ -216,6 +220,8 @@ img {
 
   text-align: center;
 }
+
+/* Модальное окно с бекдропом */
 
 .backdrop {
   position: fixed;
@@ -306,6 +312,8 @@ img {
   letter-spacing: 0.06em;
 
   cursor: pointer;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-order:hover,
@@ -391,8 +399,8 @@ img {
 .photos-text {
   position: absolute;
   bottom: 0;
-  left: 0;
-  /* transform: translate(-50%, -50%); */
+  left: 50%;
+  transform: translate(-50%, 0);
 
   margin: 0;
   padding-top: 27px;
@@ -494,16 +502,13 @@ img {
   height: 44px;
 
   border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
-}
-
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
-  fill: var(--primary-bg-color);
 }
 
 .social-icon,
@@ -512,6 +517,13 @@ img {
   height: 20px;
 
   fill: var(--svg-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--primary-bg-color);
 }
 
 /* Секция Постоянные клиенты */
@@ -544,6 +556,8 @@ img {
 
   border: 1px solid var(--svg-color);
   border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-item:hover,
@@ -564,16 +578,18 @@ img {
   height: 90px;
 }
 
-.clients-link:hover .clients-icon,
-.clients-link:focus .clients-icon {
-  fill: var(--accent-color);
-}
-
 .clients-icon {
   width: 44px;
   height: 49px;
 
   fill: var(--svg-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
 }
 
 /* Страница портфолио */
@@ -613,6 +629,10 @@ img {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-button:hover,
@@ -636,6 +656,8 @@ img {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:nth-child(3n) {
@@ -665,7 +687,8 @@ img {
 .portfolio-tooltip {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
 
   margin: 0;
   padding: 63px 24px;
@@ -775,6 +798,8 @@ img {
   color: rgba(255, 255, 255, 0.6);
 
   text-decoration: none;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-adress .link:last-child {
@@ -806,6 +831,8 @@ img {
   border-radius: 50%;
 
   background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .network-link:hover,
@@ -817,13 +844,6 @@ img {
 .network-link:focus .network-icon {
   fill: var(--additional-background-color);
 }
-
-/* .network-icon {
-  width: 20px;
-  height: 20px;
-
-  fill: var(--svg-color);
-} */
 
 .network-title {
   display: inline-block;
