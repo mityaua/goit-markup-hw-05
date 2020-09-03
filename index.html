@@ -75,7 +75,9 @@
           <h1 class="hero-title">
             Эффективные решения<br />для вашего бизнеса
           </h1>
-          <button type="button" class="button-order">Заказать услугу</button>
+          <button data-modal-open type="button" class="button-order">
+            Заказать услугу
+          </button>
         </div>
       </section>
 
@@ -141,28 +143,37 @@
           <h2 class="photos-title">Чем мы занимаемся</h2>
           <ul class="photos-list list">
             <li class="photos-item">
-              <img
-                src="./images/whattodo-1.jpg"
-                alt="Человек печатает текст на клавиатуре"
-                width="370"
-                height="294"
-              />
+              <div class="photos-thumb">
+                <img
+                  src="./images/whattodo-1.jpg"
+                  alt="Человек печатает текст на клавиатуре"
+                  width="370"
+                  height="294"
+                />
+                <p class="photos-text">Десктопные приложения</p>
+              </div>
             </li>
             <li class="photos-item">
-              <img
-                src="./images/whattodo-2.jpg"
-                alt="Человек смотрит на смартфон перед ноутбуком"
-                width="370"
-                height="294"
-              />
+              <div class="photos-thumb">
+                <img
+                  src="./images/whattodo-2.jpg"
+                  alt="Человек смотрит на смартфон перед ноутбуком"
+                  width="370"
+                  height="294"
+                />
+                <p class="photos-text">Мобильные приложения</p>
+              </div>
             </li>
             <li class="photos-item">
-              <img
-                src="./images/whattodo-3.jpg"
-                alt="Цветовая палитра на экране планшета"
-                width="370"
-                height="294"
-              />
+              <div class="photos-thumb">
+                <img
+                  src="./images/whattodo-3.jpg"
+                  alt="Цветовая палитра на экране планшета"
+                  width="370"
+                  height="294"
+                />
+                <p class="photos-text">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -456,5 +467,17 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button data-modal-close class="modal-close-button" type="button">
+          <svg class="modal-close-icon" width="11" height="11">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
