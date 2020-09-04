@@ -236,6 +236,10 @@ img {
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+
+  transition: opacity 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden {
@@ -243,11 +247,15 @@ img {
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
 
   width: 528px;
   height: 581px;
@@ -257,6 +265,8 @@ img {
   background-color: var(--primary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transition: transform 250ms var(--timing-function);
 }
 
 .modal-icon {
@@ -685,13 +695,15 @@ img {
 
 .portfolio-thumb {
   position: relative;
+
+  overflow: hidden;
 }
 
 .portfolio-tooltip {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 100%);
 
   margin: 0;
   padding: 63px 24px;
@@ -704,11 +716,16 @@ img {
   font-size: 18px;
   line-height: 1.56;
 
+  transition: transform 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
+
   opacity: 0;
 }
 
 .portfolio-link:hover .portfolio-tooltip,
 .portfolio-link:focus .portfolio-tooltip {
+  transform: translateY(0);
+
   opacity: 1;
 }
 
