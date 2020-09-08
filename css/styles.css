@@ -914,8 +914,11 @@ img {
 }
 
 .modal-icon {
-  display: flex;
-  justify-content: flex-end;
+  /* display: flex;
+  justify-content: flex-end; */
+  position: absolute;
+  top: 0;
+  right: 0;
   padding-right: 8px;
   padding-top: 8px;
 }
@@ -971,6 +974,9 @@ img {
 
 .callback-input {
   padding: 11px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
 }
 
 .callback-input::placeholder {
