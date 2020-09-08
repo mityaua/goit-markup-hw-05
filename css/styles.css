@@ -904,7 +904,6 @@ img {
 
   width: 528px;
   height: 581px;
-  padding: 8px;
   border-radius: 4px;
 
   background-color: var(--primary-bg-color);
@@ -917,6 +916,8 @@ img {
 .modal-icon {
   display: flex;
   justify-content: flex-end;
+  padding-right: 8px;
+  padding-top: 8px;
 }
 
 .modal-close-button {
@@ -935,4 +936,51 @@ img {
   height: 11px;
 
   fill: #000000;
+}
+
+.callback-form {
+  width: 100%;
+  padding: 40px;
+}
+
+.callback-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: var(--second-text-color);
+}
+
+.callback-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.callback-label {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.callback-input {
+  padding: 11px;
+}
+
+.callback-input::placeholder {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal textarea {
+  resize: none;
 }
