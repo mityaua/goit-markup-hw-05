@@ -664,17 +664,9 @@ img {
 .portfolio-content {
   padding: 20px 24px;
 
-  border-right-width: 1px;
-  border-right-style: solid;
-  border-right-color: #eeeeee;
-
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #eeeeee;
-
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-left-color: #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .portfolio-title {
